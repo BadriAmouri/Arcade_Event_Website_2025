@@ -5,16 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="heroSection.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header></header>
-    <section>
-        <div class="hero-section">
-            <h1>VOID TRANSMISSION: ARCADE SIGNAL INTERCEPTED</h1>
-            <h3>A cryptic signal has emerged from the void, broadcasting across the arcade realm. Is it a challenge, a puzzle, or an invitation? Decode the message, play the games, and uncover the truth</h3>
-            <button>Register Now</button>
+    <header>
+        <div class="logo">
+            <a href="#hero-section"><img src="./assets/logo.png"></a>
         </div>
-    </section>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">Workshop</a></li>
+                <li><a href="#">Sponsor</a></li>
+            </ul>
+            <i class='bx bx-menu'></i>
+        </nav>
+        
+        
+
+    </header>
+    <main>
+        <section id="hero-section">
+            <div class="cliped-div">
+                <div class="hero-section-div">
+                    <div class="text">
+                        <h1>VOID TRANSMISSION: ARCADE SIGNAL INTERCEPTED</h1>
+                        <h3>A cryptic signal has emerged from the void, broadcasting across the arcade realm. Is it a challenge, a puzzle, or an invitation? Decode the message, play the games, and uncover the truth</h3>
+                    </div>
+                    <button>Register Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <footer></footer>
+    <script>
+        // Get the menu icon and menu elements nd the body
+        const menuIcon = document.querySelector('.bx.bx-menu');
+        const navMenu = document.querySelector('.header-nav ul');
+    
+        // Add click event listener to the menu icon
+        menuIcon.addEventListener('click', function() {
+            // Toggle between display none and flex
+            if (navMenu.style.display === 'none' || navMenu.style.display === '') {
+                navMenu.style.display = 'flex';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 652) {
+                navMenu.style.display = "flex"; // Hide the menu
+            }else{
+                navMenu.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
