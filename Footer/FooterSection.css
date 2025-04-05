@@ -1,0 +1,168 @@
+
+/* Footer */
+:root {
+    --font-family-primary: 'FuturaLT', sans-serif;
+    --color-background: #000000; 
+    --color-text: #BFC7D4; 
+}
+
+/* Font-Face Declarations */
+@font-face {
+    font-family: 'Futura LT';
+    src: url('./fonts/FuturaLT-Light.ttf') format('truetype');
+    font-weight: var(--font-weight-light); /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('./fonts/FuturaLT.ttf') format('truetype');
+    font-weight: var(--font-weight-regular); /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('./fonts/FuturaLT-Bold.ttf') format('truetype');
+    font-weight: var(--font-weight-bold); /* Bold */
+    font-style: normal;
+}
+
+
+
+a {
+    all: unset;
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Match the text color of parent element */
+    cursor: pointer;       /* Add a pointer cursor for usability */
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #000000;
+    color: var(--color-text);
+    font-family: var(--font-family-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    font-family: 'FuturaLT';
+}
+
+.footer-logo p {
+    font-family: 'FuturaLT-Light';
+    width: 300px;
+}
+
+.footer-page-links {
+    display: flex;
+    gap: 5rem;
+}
+
+.links {
+    display: flex;
+    color: var(--color-text);
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-media-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    color: white;
+}
+
+.footer-media-link {
+    border: 1px solid #D7AEFF;
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center; /* Center items vertically */
+    position: relative; /* For positioning arrows */
+    transition: all 0.3s ease;
+}
+
+/* Arrow SVG Styles */
+.footer-media-link svg {
+    width: 26px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    position: absolute; /* Position arrows absolutely */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.arrow-left {
+    left: -30px; /* Position left arrow outside the button */
+}
+
+.arrow-right {
+    right: -30px; /* Position right arrow outside the button */
+}
+
+.link-1:hover {
+    border: 1px solid #fc3f19;
+    background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    background-clip: text; /* Standard property */
+    color: transparent; /* Fallback for older browsers */
+}
+
+.link-2:hover {
+    border: 1px solid #7289da;
+    color: #7289da;
+}
+
+.link-3:hover {
+    border: 1px solid #4848de;
+    color: #0a66c2;
+}
+
+.link-4:hover {
+    border: 1px solid #08851b;
+    color: #c71610; /* Fallback color */
+    background: linear-gradient(to right, #c71610, #f2a60c, #08851b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.rights {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    border-top: 0.2px solid var(--color-text);
+    padding: 0.3rem;
+    position: relative;
+    text-align: center;
+    font-weight: 100;
+    color: var(--color-text);
+    bottom: 0;
+    font-family: 'FuturaLT-Light';
+}
+
+@media (max-width: 760px) {
+    .footer-media-links{
+        visibility: none;
+        display: none;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+    }
+}
+
