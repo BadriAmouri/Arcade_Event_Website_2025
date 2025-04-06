@@ -1,0 +1,12 @@
+div.head{
+    display: flex;
+}
+div.frame{
+    flex-direction: row;
+    display: flex ;
+    div.text{
+        font-family: Cyberjunkies.ttf ;
+   
+    }
+
+}
