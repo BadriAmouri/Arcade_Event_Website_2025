@@ -1,11 +1,23 @@
 /* styles.css */
+
 * {
-    box-sizing: border-box;
-    font-family: 'Futura', sans-serif;
-  }
+  box-sizing: border-box;
+  font-family: 'OCRAEXT', sans-serif;
+  font-style: italic;
   
+}
+@font-face {
+  font-family: 'Cyberjunkies';
+  src: url('/heroSection/font/Cyberjunkies\ Italic.ttf') ;
+  style: normal;
+}
+@font-face {
+  font-family: 'OCRAEXT';
+  src: url('/heroSection/font/OCRAEXT.TTF') ;
+  style: normal;
+}
   body {
-    background-color: #1A1126;
+    background-color: #1d0935;
     color: white;
     display: flex;
     justify-content: center;
