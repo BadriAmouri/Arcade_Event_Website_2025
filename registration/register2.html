@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Info Form</title>
+  <link rel="stylesheet" href="register2.css">
+  <style>
+    /* Circular Loader (Spinner) */
+    .loader {
+      border: 16px solid #f3f3f3; /* Light grey */
+      border-top: 16px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
+      display: none; /* Initially hidden */
+      margin: 0 auto; /* Center the loader */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .form-panel {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-panel">
+        <img src="/images/registration.png" />
+    </div>
+
+    <div class="form-panel">
+      <h1 class="form-title">Personal info</h1>
+      
+      <form action="#" class="form" onsubmit="savePersonalInfo(event)">
+        <div class="form-group">
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone number</label>
+          <input type="tel" id="phone-number" placeholder="Enter your Phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="School-Name">School Name</label>
+          <input type="text" id="School-Name" placeholder="Enter your School Name">
+        </div>
+        <div class="form-group">
+          <label for="Team-Name">Team Name</label>
+          <input type="text" id="Team-Name" placeholder="Enter your Team Name">
+        </div>
+        <div class="form-group">
+          <label for="discord-id">Discord ID</label>
+          <input type="text" id="discord-id" placeholder="Enter your discord ID">
+        </div>
+
+        <!-- Circular Loader -->
+        <div id="loader" class="loader"></div>
+        
+        <button type="submit" class="submit-button">Submit →</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  const loader = document.getElementById('loader'); // Use 'loader' instead of 'loading-spinner'
+
+async function savePersonalInfo(event) {
+  event.preventDefault(); // Prevent the form from refreshing the page on submit
+  
+  // Collect form data
+  const fullName = document.getElementById('full-name').value;
+  const email = document.getElementById('email').value;
+  const phoneNumber = document.getElementById('phone-number').value;
+  const schoolName = document.getElementById('School-Name').value;
+  const teamName = document.getElementById('Team-Name').value;
+  const discordId = document.getElementById('discord-id').value;
+  
+  // Prepare the data to be sent
+  const memberData = {
+    full_name: fullName,
+    email: email,
+    phone_number: phoneNumber,
+    school_name: schoolName,
+    team_name: teamName,
+    discord_id: discordId
+  };
+
+  // Show the loading spinner
+  loader.style.display = 'block'; // Reference 'loader' here
+
+  try {
+    // Send the data to the backend to register the member
+    const response = await fetch('https://arcade-backend-ckdw.vercel.app/api/registration/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(memberData)
+    });
+
+    const result = await response.json();
+
+    // Check if registration was successful
+    if (response.ok) {
+      alert('Member registered successfully!');
+    } else {
+      alert(`Error: ${result.error}`);
+    }
+  } catch (error) {
+    console.error('Error occurred while submitting the form:', error);
+    alert('Error occurred while submitting the form.');
+  } finally {
+    // Hide the loading spinner after the request is completed
+    loader.style.display = 'none'; // Hide 'loader' here
+  }
+}
+
+
+  </script>
+</body>
+</html>
