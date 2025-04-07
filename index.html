@@ -17,10 +17,10 @@
         </div>
         <nav class="header-nav">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Agenda</a></li>
-                <li><a href="#">Workshop</a></li>
-                <li><a href="#">Sponsor</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#workshop">Workshop</a></li>
+                <li><a href="#sponsor">Sponsor</a></li>
             </ul>
             <i class='bx bx-menu'></i>
         </nav>
@@ -30,6 +30,7 @@
     </header>
     <main>
         <section id="hero-section">
+            <div class="overlay"></div>
             <div class="cliped-div">
                 <div class="hero-section-div">
                     <div class="text">
@@ -48,7 +49,8 @@
 
     <!-- AGENDA-->
 
-    <div class="part_Agenda">
+    <div class="part_Agenda" id="agenda">
+        <div class="overlay"></div>
         <div class="bottun_r_l">
             <svg width="20" height="60" viewBox="0 0 26 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="button" id="previous">
                 <path d="M25.5 80L11 40L25.5 -2.22928e-06L-3.49691e-06 40L25.5 80Z" fill="#D7AEFF"/>
@@ -289,7 +291,7 @@
     </div>
 
  <!-- WORKSHOP -->
- <div class="wrk">
+ <div class="wrk" id="workshop">
  <section class="workshop">
     <h2 class="title">WORKSHOP</h2>
     <div class="features">
@@ -320,14 +322,14 @@
 
     <!-- SPONSOR-->
 
-    <div class="sponsor_container">
+    <div class="sponsor_container" id="sponsor">
         <p class="title_section">
          Sponsor
        </p>
        <img src="./assets/spnsr.svg" alt="" class="spnsr_main">
-       <img src="./assets/center_spnsr.png" alt="" class="spnsr_center">
+       <img src="./assets/center_sponsor-removebg-preview.png" alt="" class="spnsr_center">
        <p class="desc_text">
-         Etiam egestas volutpat sed pretium 
+         BMS  ELECTRIC
        </p>
      </div>
 
@@ -345,16 +347,9 @@
             <!-- Middle Part ( Page Links Part ) -->
             <div class="footer-page-links">
               <div class="links">
-                <a >Home</a>
-                <a >Sponsors</a>
+                <a href="#hero-section">Home</a>
+                <a href="#sponsor">Sponsors</a>
                 <a >About us</a>
-                <a >Heads</a>
-                <a h>Statistics</a>
-              </div>
-    
-              <div class="links">
-                <a >Events</a>
-                <a>F&Q</a>
               </div>
             </div>
     
