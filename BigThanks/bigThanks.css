@@ -1,0 +1,39 @@
+
+  .big_thanks{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .big_thanks .container {
+    height: 200px;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+  }
+  
+  .big_thanks .circle-image {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border: 0.1em solid #16874E;
+    border-radius: 50%; /* simpler and works great */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .big_thanks .circle-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* keeps aspect ratio while covering the circle */
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+  
+  .big_thanks .circle-image:hover img {
+    transform: scale(1.2) rotate(2deg);
+  }

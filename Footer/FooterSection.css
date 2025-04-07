@@ -1,4 +1,29 @@
 
+
+
+/* Font-Face Declarations */
+@font-face {
+    font-family: 'Futura LT';
+    src: url('/heroSection/font/FuturaLT-Light.ttf') format('truetype');
+    font-weight: var(--font-weight-light); /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('/heroSection/font/FuturaLT.ttf') format('truetype');
+    font-weight: var(--font-weight-regular); /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('/heroSection/font/FuturaLT-Bold.ttf') format('truetype');
+    font-weight: var(--font-weight-bold); /* Bold */
+    font-style: normal;
+}
+
+
 /* Footer */
 :root {
     --font-family-primary: 'FuturaLT', sans-serif;
@@ -6,32 +31,10 @@
     --color-text: #BFC7D4; 
 }
 
-/* Font-Face Declarations */
-@font-face {
-    font-family: 'Futura LT';
-    src: url('./fonts/FuturaLT-Light.ttf') format('truetype');
-    font-weight: var(--font-weight-light); /* Light */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura LT';
-    src: url('./fonts/FuturaLT.ttf') format('truetype');
-    font-weight: var(--font-weight-regular); /* Regular */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura LT';
-    src: url('./fonts/FuturaLT-Bold.ttf') format('truetype');
-    font-weight: var(--font-weight-bold); /* Bold */
-    font-style: normal;
-}
-
-
 
 a {
     all: unset;
+    font-family: 'FuturaLT-Light';
     text-decoration: none; /* Remove underline */
     color: inherit;        /* Match the text color of parent element */
     cursor: pointer;       /* Add a pointer cursor for usability */
@@ -41,19 +44,25 @@ footer {
     margin-top: 40px;
     background-color: #000000;
     color: var(--color-text);
-    font-family: var(--font-family-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('./Images/footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'FuturaLT-Light';
+
 }
 
 .footer-container {
-    height: 500px;
+    
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: space-around;
+    align-items: center;
     padding: 4rem;
+    margin-top: 500px;
     padding-top: 4rem;
     padding-bottom: 0;
     font-family: 'FuturaLT';
@@ -86,7 +95,7 @@ footer {
 .footer-media-link {
     border: 1px solid #D7AEFF;
     border-radius: 2rem;
-    padding: 0.7rem 2rem;
+    padding: 0.3rem 2rem;
     display: flex;
     gap: 0.5rem;
     align-items: center; /* Center items vertically */
@@ -163,6 +172,9 @@ footer {
         display: flex;
         flex-direction: column;
         height: 650px;
+        margin-top: 0px;
+
     }
+    
 }
 
