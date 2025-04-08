@@ -23,6 +23,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
     
 }
 
@@ -108,7 +109,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('./assets/bgImage.png');
+    background-image: url('./Images/HeroImage.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: bottom center;
@@ -568,7 +569,7 @@ background-color: #f0f0f000;
   .features {
     display: flex;
     gap: 2rem;
-    margin-left: 300px;
+    margin-left: 500px;
     max-width: 1100px;
     width: 100%;
     flex-wrap: wrap;
@@ -711,11 +712,11 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 4rem;
-    margin-top: 500px;
-    padding-top: 4rem;
-    padding-bottom: 0;
+    padding: 8rem;
+    margin-top: 600px;
+    overflow: hidden;
     font-family: var(--font-secondary);
+    box-sizing: border-box;        /* Makes sure padding doesn't overflow */
 
 }
 
