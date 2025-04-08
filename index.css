@@ -255,6 +255,25 @@ main{
 
 
 
+
+
+
+
+
+
+
+
+
+/*  ABOUT ARCADE  */
+
+
+
+
+
+
+
+
+
 /* AGENDA */ 
 
 
@@ -708,6 +727,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     background-image: url('./Images/Frame\ 4.jpg');
     background-size: cover;
     background-position: center;
@@ -715,7 +735,31 @@ footer {
     background-repeat: no-repeat;
 
 }
-
+.what_are_you_waiting_for{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.what_are_you_waiting_for button{
+    font-size: 20px;
+    letter-spacing: -2px;
+    height: 45px;
+    width: 188px;
+    padding: 12px 32px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--btn-color);
+    font-family: var(--font-secondary);
+    clip-path: polygon(16px 0, 100% 0%, 100% 32px, 172px 100%, 0% 100%, 0% 16px);
+}  
+.what_are_you_waiting_for p {
+        font-family: var(--font-primary);
+        font-weight: 400;
+        font-size: 3.4rem;
+        font-style: italic;
+}
 .footer-container {
     
     width: 100%;
@@ -723,7 +767,6 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 8rem;
-    margin-top: 600px;
     overflow: hidden;
     font-family: var(--font-secondary);
     box-sizing: border-box;        /* Makes sure padding doesn't overflow */
@@ -846,7 +889,10 @@ footer {
         margin-top: 0px;
 
     }
-    
+    .what_are_you_waiting_for p {
+        font-size: 1.4rem;
+        margin-top: 20px;
+    }
 }
 
 /*  BIG THANKS  */
