@@ -701,7 +701,7 @@ a {
 footer {
     background-color: #000000;
     color: var(--color-text);
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -820,6 +820,12 @@ footer {
     font-weight: 100;
     color: var(--color-text);
     bottom: 0;
+}
+
+@media (max-width: 1280px) {
+    footer {
+        height: 100vh;
+    }
 }
 
 @media (max-width: 760px) {
