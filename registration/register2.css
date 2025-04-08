@@ -18,12 +18,14 @@
 }
   body {
     background-color: #1d0935;
+    background: url('../Images/Aliens2.jpg')  ;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    
   }
   
   .container {
@@ -163,8 +165,8 @@
         display: none;
     }
     body{
-        background-color: linear-gradient(to bottom, #9B59B6, #2C003E);
-        background-image: url('/images/registration.png');  
+      background-color: #1d0935;
+      background: url('../Images/Aliens2.jpg') 
     }
     .form-panel{
         background-color: transparent;
@@ -180,4 +182,19 @@
 a{
     text-decoration: none;
     color: white;
+}
+
+
+.input-field {
+  background-color: #3d1a58;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-field::placeholder {
+  color: #bbb;
 }

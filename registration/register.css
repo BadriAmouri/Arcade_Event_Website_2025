@@ -17,6 +17,8 @@
 }
   body {
     background-color: #1d0935;
+    background: url('../Images/Aliens2.jpg') no-repeat center center;
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -159,10 +161,7 @@
     .gradient-panel{
         display: none;
     }
-    body{
-        background-color: linear-gradient(to bottom, #9B59B6, #2C003E);
-        background-image: url('/images/registration.png');  
-    }
+  
     .form-panel{
         background-color: transparent;
     }
