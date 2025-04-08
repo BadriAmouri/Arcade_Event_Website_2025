@@ -31,7 +31,10 @@ html {
     scroll-behavior: smooth;
 }
 
-
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 
 /* HERO SECTION */
 /* header styling */
@@ -259,7 +262,7 @@ main{
 .part_Agenda{
     height: 100vh;
     
-    background: url('./Images/Aliens.jpg') no-repeat ;
+    background: url('./Images/Aliens.jpg') ;
     background-repeat: no-repeat;
     background-color: #0E0E0E;
     color: aliceblue;
@@ -824,7 +827,7 @@ footer {
 
 @media (max-width: 1280px) {
     footer {
-        height: 100vh;
+        height: 110vh;
     }
 }
 
