@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'Cyberjunkies'; /* Name for the font */
+    src: url('fonts/Cyberjunkies.otf') format('opentype'),  
+         url('fonts/Cyberjunkies.ttf') format('truetype');  
+         
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family: 'OCR A EXTENDED'; /* Name for the font */
+    src: url('fonts/OCRAEXT.ttf') format('truetype');  
+         
+    font-weight:lighter;
+    font-style:normal;
+}
+
+
+
+
+
+
+
+:root
+{
+    /* --main-font-size:clamp(1rem, 1.5vw, 1.05rem); */
+    /* --main-font-size:max(115%,12px); */
+    --main-font-size:75%;
+
+    --font-color:white;
+    --background-color:#1D0935;
+    --title-font:'Cyberjunkies';
+    --text-font:'OCR A EXTENDED';
+    --font-weight:lighter;
+    --mob-size:65%;
+    
+}
+
+body
+{
+    background-color:var(--background-color);
+    margin: 0;
+    color:var(--font-color);
+    font-size: var(--main-font-size);
+    font-family:var(--text-font) ;
+    width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: var(--title-font);
+    font-style: italic;
+    font-weight: var(--font-weight);
+    
+}
+
+
+.workshops-section
+{
+    
+    width: 100vw;
+    min-height: 95vh;
+    padding-bottom: 2em;
+    /* padding-right: 10%; */
+    background-image: url("assets/need.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text
+{    
+    /* position: relative; */
+    /* top:13%; */
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    left:15%;
+    padding-top: 8em;
+    
+    
+}
+.text h1
+{
+    font-size: 3.5em;
+    margin-bottom: 0;
+    padding-bottom: 0.2em;
+}
+
+.features
+{
+    display: flex;
+    flex-direction: row;
+    
+    width:80%;
+}
+
+.feature
+{
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+
+}
+
+.feature h3
+{
+    width:8em;
+    font-size: 1.5em;
+}
+
+.feature p
+{
+    max-width: 20em;
+        /* padding-right: 4em; */
+        /* position: relative;
+        top:-1em; */
+    }
+
+    
+    @media(max-width:2600px)
+    {
+        
+        body{
+            font-size: 115%;
+        }
+    }
+                
+              
+    @media(max-width:1365px)
+    {
+        
+        body{
+            font-size: 85%;
+        }
+
+        .text
+        {
+       padding-top: 6em;
+       /* left: 13%; */
+       /* left:12%; */
+    
+        }
+        .features
+        {
+            /* margin-top: -1%; */
+            
+        }
+    
+        
+        .feature
+        {
+            
+            padding-right: 3vw;
+            /* padding-top: -2vw; */
+
+        }
+
+        .feature p
+        {
+            /* margin-top: -1%; */
+        }
+    }
+
+
+
+@media (max-width: 960px)  {
+    body
+    {
+        font-size: var(--mob-size);
+      
+        
+    }
+  
+.text
+{    
+    
+    left:15%;
+    margin-top: -5%;
+    
+}
+
+.text h1
+{
+    font-size: 3.5em;
+    margin-bottom: 0;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+    
+}
+
+
+
+.feature h3
+{
+    width:8em;
+    font-size: 1.5em;
+    text-align: center;
+    padding-right: 0%;
+    padding-right: 0%;
+    justify-self:center;
+}
+
+.feature p
+{
+    
+   
+        padding-left: 10%;
+        max-width: 27em;
+  
+}
+
+     .workshops-section
+     {
+         position: relative;
+         top:0%;
+         width: 100%;
+         margin-top: 0 auto;
+         min-height: 100vh;
+         padding:2em 1em;
+         background-image: url("assets/mob-view.jpg");
+         justify-content: center;
+     }
+   
+     
+     
+    .features
+    {
+        display: block;
+        justify-content: center;
+        padding-top: 0%;
+    }
+    .feature
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 2%;
+        
+    }
+    
+
+
+}
+
+
+@media(max-width:423px)
+{ 
+    body
+    {
+        font-size: 55%;
+      
+    }
+    .text
+    {
+        /* margin-top: -20%; */
+        padding-top: 3em;
+    }
+
+}
+
+
